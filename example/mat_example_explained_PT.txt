@@ -1,0 +1,4 @@
+3 ->dimensão da matrix
+1 3 9\
+6 8 2 > linhas e colunas
+4 7 3/

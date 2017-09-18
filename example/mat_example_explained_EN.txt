@@ -1,0 +1,4 @@
+3 ->matrix dimension
+1 3 9\
+6 8 2 > lines and cols
+4 7 3/

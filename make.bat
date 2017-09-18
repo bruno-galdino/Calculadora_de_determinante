@@ -1,0 +1,1 @@
+gcc src\determinante.c src\io.c src\matrix.c -o bin\determinante.exe
