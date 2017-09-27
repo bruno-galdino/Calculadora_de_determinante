@@ -6,24 +6,13 @@
 
 #include "../include/io.h"
 
-int Dimensao(const char *nome)
+int Dimensao(FILE *file)
 {
-
     int dimensao = 0;
-
-    FILE *file = fopen(nome,"r");
-
-    if(!file)
-    {
-        perror("erro ao abrir arquivo:");
-        return FALHA;
-    }
     
     if(!fscanf(file,"%d",&dimensao))
         return FALHA;
-
-    fclose(file);
-
+    
     return dimensao;
 }
 
@@ -57,8 +46,6 @@ int LeMatriz(FILE *file,double *matriz,int dimensao)
     
     if(!file)
         return FALHA;
-
-    fscanf(file,"%lf",matriz);// ignora o primeiro numero
 
     for(i = 0; i < (dimensao*dimensao); i++) 
         if( !fscanf(file,"%lf",(matriz+i)) ) return FALHA;

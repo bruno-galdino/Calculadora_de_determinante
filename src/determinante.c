@@ -24,20 +24,24 @@ int main(int argc, char* argv[])
     }
 
     
-    int dimensao = Dimensao(argv[1]);
+    int dimensao = Dimensao( file_in );
+    
     if(!dimensao)
         return 	EXIT_FAILURE;
 
-    double matrix[dimensao*dimensao];
-    double determinative;
+    
+    double matriz[dimensao*dimensao];
+    
+    double determinant;
 
-    if( !(LeMatriz(file_in,matrix,dimensao)) )
+    if( !(LeMatriz(file_in,matriz,dimensao)) )
         return EXIT_FAILURE;
+    
     
     if( !( FechaArquivo(file_in) ) )
         return EXIT_FAILURE;
 
-    determinative = Determinative(matrix,dimensao);
+    determinant = Determinant(matriz,dimensao);
 
     if(argc > 2)// saida em arquivo
     {
@@ -50,13 +54,13 @@ int main(int argc, char* argv[])
             return EXIT_FAILURE;
         }
 
-        fprintf(file_out,"%.2lf",determinative);
+        fprintf(file_out,"%.2lf",determinant);
         FechaArquivo(file_out);
 
     }
 
     else
-        printf("%.2lf",determinative);// saida pelo console
+        printf("%.2lf",determinant);// saida pelo console
 
     return EXIT_SUCCESS;
 }

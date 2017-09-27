@@ -7,12 +7,12 @@
 
 enum {FALHA,SUCESSO};
 
-int Dimensao(const char *nome);
+int Dimensao( FILE *file );
 
-FILE *AbreArquivo(const char *nome,const char *modo);
-int FechaArquivo(FILE *file);
+FILE *AbreArquivo( const char *nome, const char *modo );
+int FechaArquivo( FILE *file );
 
-int LeMatriz(FILE *file,double *matriz,int dimensao);
-int EscreveMatriz(FILE *file,double *matriz,int dimensao);
+int LeMatriz( FILE *file,double *matriz,int dimensao );
+int EscreveMatriz( FILE *file , double *matriz , int dimensao );
 
 #endif

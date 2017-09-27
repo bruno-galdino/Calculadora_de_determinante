@@ -11,11 +11,11 @@
 */
 
 #ifndef MATRIX_H
-#define MATRIX_H_H
+#define MATRIX_H
 
 #include <math.h>
 
 double Cofactor( double *matrix,const int dimension,const  double element, const int position_i, const int position_j);
-double Determinative( double *matrix,const int dimension);
+double Determinant( double *matrix,const int dimension);
 
 #endif
